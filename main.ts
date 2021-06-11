@@ -539,7 +539,37 @@ function story2 () {
         story.printText("Donkey: so what do you do for a living?", 75, 100)
         story.printText("i work as a" + game.askForString(""), 75, 100)
         story.printText("Donkey: thats so cool !", 75, 100)
-        story.printText("Donkey: thats so cool !", 75, 100)
+        story.printText("You: cool.", 75, 100)
+        story.printText("Donkey: Hey can you turn here? I think it should be faster.", 75, 100)
+        story.showPlayerChoices("Yes.", "No.")
+        if (story.getLastAnswer() == "Yes.") {
+            story.printText("you: Yes.", 75, 100)
+            story.printText("Donkey: cool awesome!", 75, 100)
+            story.printText("/5 minutes later/ ", 75, 100)
+            story.printText("Donkey: sorry! I didn't think we would get stuck in traffic i really thought it would be faster!", 75, 100)
+            story.showPlayerChoices("Its ok dont worry", "Goddam.")
+            if (story.getLastAnswer() == "Its ok dont worry") {
+                story.printText("Its ok dont worry", 75, 100)
+                story.printText("Donkey: so how do you know shrek?", 75, 100)
+                story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
+                story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
+                story.printText("You: ok!", 75, 100)
+            } else {
+                story.printText("Goddam.", 75, 100)
+                story.printText("Donkey: so how do you know shrek?", 75, 100)
+                story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
+                story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
+                story.printText("You: ok!", 75, 100)
+            }
+        } else {
+            story.printText("you: No.", 75, 100)
+            story.printText("donkey: oh, ok i quess", 75, 100)
+            story.printText("Donkey: so how do you know shrek?", 75, 100)
+            story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
+            story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
+            story.printText("You: ok!", 75, 100)
+            story.printText("Donkey: you know you really should of gone with my route before.", 75, 100)
+        }
     })
 }
 let donk: Sprite = null
