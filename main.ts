@@ -1,4 +1,3 @@
-
 function story2 () {
     story.startCutscene(function () {
         scene.setBackgroundImage(img`
