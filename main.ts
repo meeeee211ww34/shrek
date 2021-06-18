@@ -357,6 +357,7 @@ function story2 () {
             ................................................................
             ................................................................
             `, SpriteKind.Player)
+        sudecs = 0
         srhek.setPosition(120, 70)
         puss.setPosition(180, 160)
         dragon.setPosition(180, 160)
@@ -554,12 +555,14 @@ function story2 () {
                 story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
                 story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
                 story.printText("You: ok!", 75, 100)
+                story.printText("(pulls over) (out of car)", 75, 100)
             } else {
                 story.printText("Goddam.", 75, 100)
                 story.printText("Donkey: so how do you know shrek?", 75, 100)
                 story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
                 story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
                 story.printText("You: ok!", 75, 100)
+                story.printText("(pulls over) (out of car)", 75, 100)
             }
         } else {
             story.printText("you: No.", 75, 100)
@@ -568,12 +571,27 @@ function story2 () {
             story.printText("You: we used to go bowling together, he was so sweet to me! But i had to quit the club so we just meet once a week.", 75, 100)
             story.printText("Donkey: thats so cool! Hey you can pull over here!", 75, 100)
             story.printText("You: ok!", 75, 100)
+            story.printText("(pulls over) (out of car)", 75, 100)
             story.printText("Donkey: you know you really should of gone with my route before.", 75, 100)
+            story.showPlayerChoices("Its ok dont worry", "Goddam.")
         }
+        if (donky_love_points == 1) {
+            story.printText("Donkey: hey quickly, before i go in let me teach you a little trick to get the one you want! If you wanna be charismatic like me remember to press B.", 75, 100)
+            story.printText("You: thankyou!", 75, 100)
+            story.printText("Donkey: well ill see you sometime! bye!", 75, 100)
+            sudecs += 1
+        } else {
+            story.printText("Donkey: you really wernt that nice to me today! ", 75, 100)
+            story.printText("Donkey: im gonna tell shrek all about this!", 75, 100)
+            donky_love_points += -1
+        }
+        donk.setPosition(180, 160)
+        puss.setPosition(120, 70)
     })
 }
 let donk: Sprite = null
 let far: Sprite = null
+let sudecs = 0
 let srhek: Sprite = null
 let puss: Sprite = null
 let donky_love_points = 0
